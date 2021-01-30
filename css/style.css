@@ -498,6 +498,10 @@ h1 {
   background-size: 100% 2px;
 }
 
+.page-footer--logo-fcb {
+    width: 2em;
+}
+
 .line-center {
   display: flex;
   flex-direction: row;
