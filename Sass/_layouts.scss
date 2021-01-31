@@ -104,11 +104,11 @@ h1 {
     font-size: 2em;
 }
 
-// h2 {
-//     @media all and (max-width:577px){
-//         font-size: 1.2em;
-//     };
-// }
+h2 {
+    @media all and (max-width:577px){
+        font-size: 1.2em;
+    };
+}
 
 // h4, .h4 {
 //     @media all and (max-width:577px){
@@ -118,11 +118,11 @@ h1 {
 
 // 
 
-// body, .card-text, .nav-link, option, .form-control {
-//     @media all and (max-width:577px){
-//         font-size: 0.9em;
-//     };
-// }
+body, .card-text, .nav-link, option, .form-control {
+    @media all and (max-width:577px){
+        font-size: 1.1em;
+    };
+}
 
 // home title
 
@@ -325,7 +325,7 @@ h1 {
         transform : scale(1);
         opacity: 1;
         transition: all 300ms ease-in-out; 
-        @media all and (max-width: 1120px){
+        @media all and (min-width: 578px) and (max-width: 1120px){
             font-size: 0.8em;
         }
     }

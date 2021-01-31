@@ -190,14 +190,8 @@ h1 {
 }
 
 @media all and (max-width: 577px) {
-  h4, .h4 {
-    font-size: 1.2em;
-  }
-}
-
-@media all and (max-width: 577px) {
   body, .card-text, .nav-link, option, .form-control {
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 }
 
@@ -402,7 +396,7 @@ h1 {
   opacity: 1;
   transition: all 300ms ease-in-out;
 }
-@media all and (max-width: 1120px) {
+@media all and (min-width: 578px) and (max-width: 1120px) {
   .home--tile .card-title {
     font-size: 0.8em;
   }
