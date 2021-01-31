@@ -182,11 +182,6 @@ h1 {
   font-style: italic;
   font-size: 2em;
 }
-@media all and (max-width: 577px) {
-  h1 {
-    font-size: 2em;
-  }
-}
 
 @media all and (max-width: 577px) {
   h2 {
@@ -204,31 +199,6 @@ h1 {
   body, .card-text, .nav-link, option, .form-control {
     font-size: 0.9em;
   }
-}
-
-.text-primary {
-  color: #31657e !important;
-}
-
-@media all and (max-width: 577px) {
-  .btn {
-    font-size: 1em;
-  }
-}
-
-.btn-primary {
-  background-color: #31657e !important;
-  border-color: #31657e !important;
-}
-
-.btn-secondary {
-  background-color: white;
-  border-color: #31657e !important;
-  color: #31657e !important;
-  animation: wriggle 2s alternate infinite;
-}
-.btn-secondary:hover {
-  background-color: white;
 }
 
 .jumbotron {
@@ -499,7 +469,7 @@ h1 {
 }
 
 .page-footer--logo-fcb {
-    width: 2em;
+  width: 2em;
 }
 
 .line-center {

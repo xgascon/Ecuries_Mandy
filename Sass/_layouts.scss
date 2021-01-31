@@ -102,58 +102,27 @@ h1 {
     font-style: italic;
     // text-decoration: underline;
     font-size: 2em;
-    @media all and (max-width:577px){
-        font-size: 2.0em;
-    };
 }
 
-h2 {
-    @media all and (max-width:577px){
-        font-size: 1.2em;
-    };
-}
+// h2 {
+//     @media all and (max-width:577px){
+//         font-size: 1.2em;
+//     };
+// }
 
-h4, .h4 {
-    @media all and (max-width:577px){
-        font-size: 1.2em;
-    };
-}
+// h4, .h4 {
+//     @media all and (max-width:577px){
+//         font-size: 1.2em;
+//     };
+// }
 
 // 
 
-body, .card-text, .nav-link, option, .form-control {
-    @media all and (max-width:577px){
-        font-size: 0.9em;
-    };
-}
-
-.text-primary {
-    color: $second-color-site;
-}
-
-.btn {
-    @media all and (max-width:577px){
-        font-size: 1.0em;
-    };
-}
-
-.btn-primary {
-    background-color: $second-color-site;
-    border-color: $second-color-site;
-}
-
-.btn-secondary {
-    background-color: white;
-    border-color: $second-color-site;
-    color: $second-color-site;
-    // transform: rotate(10deg);
-    // transform-origin: 50% 0%;
-    // animation: alarm 1s alternate infinite;
-    animation: wriggle 2s alternate infinite; 
-    &:hover {
-        background-color: white;        
-    }
-}
+// body, .card-text, .nav-link, option, .form-control {
+//     @media all and (max-width:577px){
+//         font-size: 0.9em;
+//     };
+// }
 
 // home title
 
