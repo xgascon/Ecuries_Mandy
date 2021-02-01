@@ -104,6 +104,12 @@ body {
   background-color: white;
   transition: all 0.8s ease;
 }
+@media all and (max-width: 991px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .navbar .active {
   font-weight: bold;
 }
@@ -162,11 +168,6 @@ body {
   border-radius: 5%;
 }
 
-.navbar-brandAndToggler {
-  display: flex;
-  flex-direction: row;
-}
-
 @media all and (min-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
     justify-content: center;
@@ -178,15 +179,18 @@ body {
   }
 }
 
+.navbar--logo-Mandy {
+  width: 3.25em;
+}
+@media all and (max-width: 991px) {
+  .navbar--logo-Mandy {
+    width: 2.5em;
+  }
+}
+
 h1 {
   font-style: italic;
   font-size: 2em;
-}
-
-@media all and (max-width: 577px) {
-  h2 {
-    font-size: 1.2em;
-  }
 }
 
 @media all and (max-width: 577px) {
@@ -196,7 +200,7 @@ h1 {
 }
 
 .jumbotron {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../images/enCours2.jpg), no-repeat;
+  background: linear-gradient(to right, rgba(5, 2, 109, 0.3), rgba(1, 0, 22, 0.6), rgba(139, 29, 40, 0.3)), url(../images/enCours2.jpg), no-repeat;
   background-position: 10% 0%;
   color: white;
   text-shadow: black 0.1em 0.1em 0.2em;
@@ -232,9 +236,10 @@ h1 {
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
-  color: #931f28;
+  font-weight: bold;
+  color: #05026d;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 0.15rem;
   transition: all 0.3s;
   position: relative;
@@ -253,8 +258,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 0 0 1px #931f28;
-  background-color: white;
+  background-color: yellow;
   border-radius: 10rem;
   z-index: -2;
 }
@@ -262,25 +266,19 @@ h1 {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
+  right: 0;
   width: 0%;
   height: 100%;
-  transform: translateX(-50%);
-  opacity: 0.2;
-  background-color: #931f28;
+  background-color: #e6e600;
   transition: all 0.3s;
   border-radius: 10rem;
   z-index: -1;
-  box-shadow: inset 0 0 0 1px #931f28;
 }
 .home--contact-button:hover {
-  color: white;
   letter-spacing: 0.3rem;
 }
 .home--contact-button:hover::before {
   width: 100%;
-  height: 100%;
-  opacity: 1;
 }
 
 .home-title {
@@ -294,10 +292,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-#home-title-contact {
-  align-self: flex-end;
 }
 
 .carousel {
@@ -396,9 +390,9 @@ h1 {
   opacity: 1;
   transition: all 300ms ease-in-out;
 }
-@media all and (min-width: 578px) and (max-width: 1120px) {
+@media all and (min-width: 992px) and (max-width: 1160px) {
   .home--tile .card-title {
-    font-size: 0.8em;
+    font-size: 1.1em !important;
   }
 }
 .home--tile a {
@@ -416,18 +410,13 @@ h1 {
 .home--tile-reglement {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/logo_Mandy.jpg);
   background-position: 15% 60%;
-  background-size: 100%;
-}
-@media all and (min-width: 992px) and (max-width: 1450px) {
-  .home--tile-reglement {
-    background-size: 150%;
-  }
+  background-size: cover;
 }
 
 .home--tile-stages {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/stages.jpg);
   background-position: 30% 55%;
-  background-size: 150%;
+  background-size: cover;
 }
 
 .home--tile-tarifs {
@@ -438,7 +427,7 @@ h1 {
 .home--tile-contact {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/contact.jpg);
   background-position: 40% 20%;
-  background-size: 120%;
+  background-size: cover;
 }
 
 .page-footer {
@@ -448,6 +437,11 @@ h1 {
   width: 100%;
   color: white;
   background-color: black;
+}
+@media all and (max-width: 577px) {
+  .page-footer {
+    font-size: 1em;
+  }
 }
 .page-footer a {
   color: white;
