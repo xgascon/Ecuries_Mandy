@@ -1,18 +1,3 @@
-body {
-    font-family: "Sina";
-    // background-color: $bg-color-site;
-    font-size: 1.5em;
-    // background: 
-        // linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        // url("../images/logo_Mandy.jpg"), 
-        // no-repeat;
-}
-
-.container {
-    max-width: 1500px;
-    margin: auto;
-}
-
 // Navbar
 
 .navbar {
@@ -86,10 +71,7 @@ body {
 }
 
 .navbar-expand-lg .navbar-collapse {
-    @media all and (min-width: 992px){
-        justify-content: center;        
-    }
-    @media all and (max-width: 1100px){
+    @media all and (min-width: 992px) and (max-width: 1100px){
         font-size: 0.85em;
     }
 }
@@ -118,117 +100,6 @@ body, .card-text, .nav-link, option, .form-control {
     };
 }
 
-// home title
-
-.jumbotron {
-    background: linear-gradient(to right, rgba(5, 2, 109, 0.3), rgba(1, 0, 22, 0.6),rgba(139, 29, 40, 0.3)),
-    // url(../images/Dj_Moon.jpg), no-repeat;
-    // background-position: 0% 65%;
-    url(../images/enCours2.jpg), no-repeat;
-    background-position: 10% 0%;
-    @media all and (min-width: 992px){
-        background-size: 100%;
-        background-position: 0% 0%;
-    }  
-    color: white;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    height: 400px;
-    margin-top: 6em;
-    margin-bottom: 3em;
-    animation: alarm 2s;
-    @media all and (max-width: 991px){
-        margin-top: 4em!important;
-    }
-    @media all and (max-width: 577px){
-        margin-top: 5em!important;
-    }
-    a {
-        color: white;
-    }
-    img {
-        animation: apparition-top 1.3s;
-    }
-}
-
-
-.home--contact-button {   
-    display: inline-block;
-    padding: .75rem 1.25rem;
-    border-radius: 10rem;
-    font-weight: bold;
-    // color: #931f28;
-    color: rgba(5, 2, 109, 1);
-    // color: white;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: .15rem;
-    transition: all .3s;
-    position: relative;
-    overflow: hidden;    
-    z-index: 1;    
-    @media all and (max-width: 577px){
-        font-size: 0.6em;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    //   box-shadow: inset 0 0 0 1px #931f28;
-    //   background-color: #931f28;
-
-    background-color: yellow;
-    
-    // background-color: rgba(5, 2, 109, 1) ;
-    //   background-color:white;
-      border-radius: 10rem;
-      z-index: -2;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 0%;
-      height: 100%;
-    //   transform: translateX(-50%);
-    //   opacity: 0.2;
-    //   box-shadow: inset 0 0 0 1px red;
-
-
-      background-color: darken(yellow, 5%);
-    // background-color: #931f28;
-    // background-color: white;
-      transition: all .3s;
-      border-radius: 10rem;
-      z-index: -1;
-    // box-shadow: inset 0 0 0 1px #931f28;
-    }
-    &:hover {
-    //   color: white;
-      letter-spacing: .30rem;      
-      &::before {
-        width: 100%;        
-      }
-    }
-  }
-
-.home-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;    
-}
-
-.home-title-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-// 
 
 .carousel {
     max-height: 300px;
@@ -244,6 +115,10 @@ body, .card-text, .nav-link, option, .form-control {
 
 .scroll-apparition {
     visibility: hidden;
+}
+
+.apparition-bright-animation {
+    animation: apparition-bright 2s;
 }
 
 .apparition-right-1-animation {
@@ -290,95 +165,6 @@ body, .card-text, .nav-link, option, .form-control {
     animation: wriggle 0.4s alternate infinite; 
 }
 
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.separationBar {
-    background-color: black;
-    width: 75%;
-  }
-
-.home--tile-display {
-    display: flex;
-    justify-content: center;
-}
-  
-.home--tile {
-    overflow: hidden;
-    // text-shadow: black 0.1em 0.1em 0.2em;
-    transform: scale(1);
-    transition: all 500ms ease-in-out;  
-    &:hover {
-        transform: scale(1.1);
-        .card-title {            
-            transform : scale(1.5);
-            opacity: 0.4;
-        }
-    }
-    & .card-title {
-        flex-wrap: wrap;
-        transform : scale(1);
-        opacity: 1;
-        transition: all 300ms ease-in-out; 
-        @media all and (min-width:992px) and (max-width:1160px){
-            font-size: 1.1em!important;
-        };
-    }
-    & a {
-        color: white;               
-        &:hover {
-            text-decoration: initial;            
-        }
-    }    
-}
-
-.home--tile-installations {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
-        url(../images/installations1.jpg);
-    background-position: 55% 80%;
-}
-
-.home--tile-reglement {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
-        url(../images/logo_Mandy.jpg);
-    background-position: 15% 60%;
-    background-size: cover;
-    // background-size: 100%;
-    // @media all and (min-width:992px) and (max-width: 1450px){
-    //     background-size: 175%;
-    // }
-}
-
-.home--tile-stages {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
-        url(../images/stages.jpg);
-    background-position: 30% 55%;
-    // background-size: 150%;
-    background-size: cover;
-}
-
-.home--tile-tarifs {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
-        url(../images/Dj_Moon.jpg);
-    background-position: 90% 60%;
-}
-
-.home--tile-contact {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
-        url(../images/contact.jpg);
-    background-position: 40% 20%;
-    // background-size: 120%;
-    background-size: cover;
-}
-
 .page-footer {
     font-size: 0.9em;
     @media all and (max-width: 577px){
@@ -404,28 +190,6 @@ body, .card-text, .nav-link, option, .form-control {
     }
 }
 
-.page-footer--logo-fcb {
+.page-footer__logo-fcb {
     width: 2em;
-}
-
-.line-center {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;    
-}
-
-.column-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.inline {
-    display: inline-block;
-}
-
-.image {
-    width: 60%;
 }

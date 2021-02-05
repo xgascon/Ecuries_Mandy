@@ -14,6 +14,32 @@
   font-family: "Sina";
   src: url("../fonts/Sina/SinaNovaReg-webfont.woff");
 }
+body {
+  font-family: "Sina";
+  font-size: 1.5em;
+}
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+.flex-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 @keyframes wriggle {
   0% {
     transform: translateX(1%) translateY(-2%) rotate(2deg);
@@ -28,7 +54,7 @@
     transform: translateX(-1%) translateY(-2%) rotate(-2deg);
   }
 }
-@keyframes alarm {
+@keyframes apparition-bright {
   0% {
     opacity: 0.4;
   }
@@ -86,16 +112,6 @@
     opacity: 1;
   }
 }
-body {
-  font-family: "Sina";
-  font-size: 1.5em;
-}
-
-.container {
-  max-width: 1500px;
-  margin: auto;
-}
-
 .navbar {
   font-size: 0.8em;
   display: flex;
@@ -168,12 +184,7 @@ body {
   border-radius: 5%;
 }
 
-@media all and (min-width: 992px) {
-  .navbar-expand-lg .navbar-collapse {
-    justify-content: center;
-  }
-}
-@media all and (max-width: 1100px) {
+@media all and (min-width: 992px) and (max-width: 1100px) {
   .navbar-expand-lg .navbar-collapse {
     font-size: 0.85em;
   }
@@ -199,101 +210,6 @@ h1 {
   }
 }
 
-.jumbotron {
-  background: linear-gradient(to right, rgba(5, 2, 109, 0.3), rgba(1, 0, 22, 0.6), rgba(139, 29, 40, 0.3)), url(../images/enCours2.jpg), no-repeat;
-  background-position: 10% 0%;
-  color: white;
-  text-shadow: black 0.1em 0.1em 0.2em;
-  height: 400px;
-  margin-top: 6em;
-  margin-bottom: 3em;
-  animation: alarm 2s;
-}
-@media all and (min-width: 992px) {
-  .jumbotron {
-    background-size: 100%;
-    background-position: 0% 0%;
-  }
-}
-@media all and (max-width: 991px) {
-  .jumbotron {
-    margin-top: 4em !important;
-  }
-}
-@media all and (max-width: 577px) {
-  .jumbotron {
-    margin-top: 5em !important;
-  }
-}
-.jumbotron a {
-  color: white;
-}
-.jumbotron img {
-  animation: apparition-top 1.3s;
-}
-
-.home--contact-button {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10rem;
-  font-weight: bold;
-  color: #05026d;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.15rem;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-@media all and (max-width: 577px) {
-  .home--contact-button {
-    font-size: 0.6em;
-  }
-}
-.home--contact-button::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: yellow;
-  border-radius: 10rem;
-  z-index: -2;
-}
-.home--contact-button::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0%;
-  height: 100%;
-  background-color: #e6e600;
-  transition: all 0.3s;
-  border-radius: 10rem;
-  z-index: -1;
-}
-.home--contact-button:hover {
-  letter-spacing: 0.3rem;
-}
-.home--contact-button:hover::before {
-  width: 100%;
-}
-
-.home-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.home-title-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .carousel {
   max-height: 300px;
 }
@@ -310,6 +226,10 @@ h1 {
 
 .scroll-apparition {
   visibility: hidden;
+}
+
+.apparition-bright-animation {
+  animation: apparition-bright 2s;
 }
 
 .apparition-right-1-animation {
@@ -356,80 +276,6 @@ h1 {
   animation: wriggle 0.4s alternate infinite;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.separationBar {
-  background-color: black;
-  width: 75%;
-}
-
-.home--tile-display {
-  display: flex;
-  justify-content: center;
-}
-
-.home--tile {
-  overflow: hidden;
-  transform: scale(1);
-  transition: all 500ms ease-in-out;
-}
-.home--tile:hover {
-  transform: scale(1.1);
-}
-.home--tile:hover .card-title {
-  transform: scale(1.5);
-  opacity: 0.4;
-}
-.home--tile .card-title {
-  flex-wrap: wrap;
-  transform: scale(1);
-  opacity: 1;
-  transition: all 300ms ease-in-out;
-}
-@media all and (min-width: 992px) and (max-width: 1160px) {
-  .home--tile .card-title {
-    font-size: 1.1em !important;
-  }
-}
-.home--tile a {
-  color: white;
-}
-.home--tile a:hover {
-  text-decoration: initial;
-}
-
-.home--tile-installations {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/installations1.jpg);
-  background-position: 55% 80%;
-}
-
-.home--tile-reglement {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/logo_Mandy.jpg);
-  background-position: 15% 60%;
-  background-size: cover;
-}
-
-.home--tile-stages {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/stages.jpg);
-  background-position: 30% 55%;
-  background-size: cover;
-}
-
-.home--tile-tarifs {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/Dj_Moon.jpg);
-  background-position: 90% 60%;
-}
-
-.home--tile-contact {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/contact.jpg);
-  background-position: 40% 20%;
-  background-size: cover;
-}
-
 .page-footer {
   font-size: 0.9em;
   line-height: 0.9;
@@ -456,39 +302,187 @@ h1 {
   background-size: 100% 2px;
 }
 
-.page-footer--logo-fcb {
+.page-footer__logo-fcb {
   width: 2em;
 }
 
-.line-center {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
+.separationBar {
+  background-color: black;
+  width: 75%;
 }
 
-.column-center {
+.contact-button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  font-weight: bold;
+  color: #05026d;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+@media all and (max-width: 577px) {
+  .contact-button {
+    font-size: 0.6em;
+  }
+}
+.contact-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.contact-button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #e6e600;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.contact-button:hover {
+  letter-spacing: 0.3rem;
+}
+.contact-button:hover::before {
+  width: 100%;
+}
+
+.jumbotron {
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  height: 400px;
+  margin-top: 6em;
+  margin-bottom: 3em;
+}
+@media all and (max-width: 991px) {
+  .jumbotron {
+    margin-top: 4em !important;
+  }
+}
+@media all and (max-width: 577px) {
+  .jumbotron {
+    margin-top: 5em !important;
+  }
+}
+
+.home__jumbotron {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2), rgba(139, 29, 40, 0)), url(../images/horse.jpg), no-repeat;
+  background-position: 50% 0%;
+  background-size: cover;
+}
+@media all and (min-width: 992px) {
+  .home__jumbotron {
+    background-position: 0% 40%;
+  }
+}
+
+.home__tile--display {
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-.inline {
-  display: inline-block;
+.home__tile {
+  overflow: hidden;
+  transform: scale(1);
+  transition: all 500ms ease-in-out;
 }
-
-.image {
-  width: 60%;
+.home__tile:hover {
+  transform: scale(1.1);
 }
-
-.img-cart {
-  width: 5%;
+.home__tile:hover .card-title {
+  transform: scale(1.5);
+  opacity: 0.4;
 }
-@media all and (max-width: 577px) {
-  .img-cart {
-    width: 15%;
+.home__tile .card-title {
+  flex-wrap: wrap;
+  transform: scale(1);
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+@media all and (min-width: 992px) and (max-width: 1160px) {
+  .home__tile .card-title {
+    font-size: 1.1em !important;
   }
+}
+.home__tile a {
+  color: white;
+}
+.home__tile a:hover {
+  text-decoration: initial;
+}
+
+.home__tile-installations {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/installations1.jpg);
+  background-position: 55% 80%;
+}
+
+.home__tile-reglement {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/logo_Mandy.jpg);
+  background-position: 15% 60%;
+  background-size: cover;
+}
+
+.home__tile-stages {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/stages.jpg);
+  background-position: 30% 55%;
+  background-size: cover;
+}
+
+.home__tile-tarifs {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/Dj_Moon.jpg);
+  background-position: 90% 60%;
+}
+
+.home__tile-contact {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/contact.jpg);
+  background-position: 40% 20%;
+  background-size: cover;
+}
+
+.home__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.home__title--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact__contact-details {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(../images/contact.jpg), no-repeat;
+  background-position: 0% 30%;
+  background-size: cover;
+  color: white;
+}
+.contact__contact-details .link--underline {
+  color: #7bd5ff;
+  text-shadow: 2px 2px 2px black;
+  text-decoration: none;
+  background-size: 0% 2px;
+  background-position: left bottom;
+  background-image: linear-gradient(to right, #7bd5ff 0%, #7bd5ff 100%);
+  background-repeat: no-repeat;
+  transition: all 0.55s cubic-bezier(0.2, 0.75, 0.5, 1);
+}
+.contact__contact-details .link--underline:hover {
+  background-size: 100% 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

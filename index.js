@@ -34,6 +34,7 @@ function apparitionWhenVisible (element, animation) {
 }
 
 function apparitionWhenVisibleAllAnimations () {
+apparitionWhenVisible('.apparition-bright', 'apparition-bright-animation');
 apparitionWhenVisible('.apparition-scale', 'apparition-scale-animation');
 apparitionWhenVisible('.apparition-scale-1', 'apparition-scale-1-animation');
 apparitionWhenVisible('.apparition-scale-2', 'apparition-scale-2-animation');
