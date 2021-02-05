@@ -472,12 +472,12 @@ h1 {
   color: white;
 }
 .contact__contact-details .link--underline {
-  color: yellow;
+  color: #ffff77;
   text-shadow: 2px 2px 2px black;
   text-decoration: none;
   background-size: 0% 2px;
   background-position: left bottom;
-  background-image: linear-gradient(to right, yellow 0%, yellow 100%);
+  background-image: linear-gradient(to right, #ffff77 0%, #ffff77 100%);
   background-repeat: no-repeat;
   transition: all 0.55s cubic-bezier(0.2, 0.75, 0.5, 1);
 }
