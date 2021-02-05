@@ -125,7 +125,7 @@
     background-size: cover;
     color: white;
     & .link--underline {
-        $contact__link-color:rgb(123, 213, 255) ;
+        $contact__link-color:yellow ;
         color:$contact__link-color;
         text-shadow: 2px 2px 2px black;
         text-decoration: none;
@@ -138,4 +138,16 @@
             background-size: 100% 2px;
         }
     }
+}
+
+.contact__logo-fcb {
+    width: 2em;
+}
+
+.contact__logo-email {
+    width: 1.5em;
+}
+
+.contact__logo-phone {
+    width: 1.5em;
 }
