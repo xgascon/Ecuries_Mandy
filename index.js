@@ -45,6 +45,7 @@ apparitionWhenVisible('.apparition-right-2', 'apparition-right-2-animation');
 apparitionWhenVisible('.apparition-bottom-1', 'apparition-bottom-1-animation');
 apparitionWhenVisible('.apparition-bottom-2', 'apparition-bottom-2-animation');
 apparitionWhenVisible('.apparition-bottom-3', 'apparition-bottom-3-animation');
+apparitionWhenVisible('.yellow-underline', 'bg-100');
 }
 
 apparitionWhenVisibleAllAnimations ()

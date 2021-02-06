@@ -35,6 +35,17 @@ body {
   align-items: center;
 }
 
+.flex-items-start {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -383,6 +394,19 @@ h1 {
   width: 100%;
 }
 
+.yellow-underline {
+  text-decoration: none;
+  background-size: 0% 2px;
+  background-position: left bottom;
+  background-image: linear-gradient(to right, yellow 0%, yellow 100%);
+  background-repeat: no-repeat;
+}
+
+.bg-100 {
+  transition: background-size 1.3s ease-in-out;
+  background-size: 100% 2px;
+}
+
 .home__jumbotron {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2), rgba(139, 29, 40, 0)), url(../images/horse.jpg), no-repeat;
   background-position: 50% 0%;
@@ -441,8 +465,8 @@ h1 {
 }
 
 .home__tile-stages {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/stages.jpg);
-  background-position: 30% 55%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/enCours2.jpg);
+  background-position: 50% 0%;
   background-size: cover;
 }
 
@@ -521,7 +545,7 @@ h1 {
 }
 
 .reglement__jumbotron-1 {
-  background: url(../images/ranch.jpg), no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../images/ranch.jpg), no-repeat;
   background-position: 50% 0%;
   background-size: cover;
   color: white;
@@ -533,6 +557,14 @@ h1 {
 }
 .reglement__download-button::before {
   background-color: #e6e600;
+}
+
+.tarifs__jumbotron {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url(../images/horse-funny.jpg), no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  color: white;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
