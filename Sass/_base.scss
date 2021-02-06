@@ -48,3 +48,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.display-none-for-phone {
+    @media all and (max-width: 577px) {
+        display: none;
+    }
+}

@@ -40,6 +40,12 @@ body {
   flex-direction: column;
 }
 
+@media all and (max-width: 577px) {
+  .display-none-for-phone {
+    display: none;
+  }
+}
+
 @keyframes wriggle {
   0% {
     transform: translateX(1%) translateY(-2%) rotate(2deg);
