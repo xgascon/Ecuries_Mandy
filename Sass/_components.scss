@@ -63,3 +63,12 @@
         }
     }
 }
+
+.yellow-underline {
+    $underline-color:yellow ;
+    text-decoration: none;
+    background-size: 100% 2px;
+    background-position: left bottom;
+    background-image: linear-gradient(to right, $underline-color 0%, $underline-color 100%);
+    background-repeat: no-repeat;
+}

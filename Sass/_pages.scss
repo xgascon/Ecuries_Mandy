@@ -67,8 +67,8 @@
 .home__tile-stages {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
-        url(../images/stages.jpg);
-    background-position: 30% 55%;
+        url(../images/enCours2.jpg);
+    background-position: 50% 0%;
     // background-size: 150%;
     background-size: cover;
 }
@@ -162,7 +162,7 @@
 
 .reglement__jumbotron-1 {
     background: 
-    // linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
+    linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.0)),
     url(../images/ranch.jpg), no-repeat;
     background-position: 50% 0%;
     background-size: cover;
@@ -177,4 +177,16 @@
     &::before {
         background-color: darken(rgba(255, 255, 0, 1),5%);
     }
+}
+
+// Tarifs page
+
+.tarifs__jumbotron {
+    background: 
+    // linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
+    url(../images/horse-funny.jpg), no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+    color: white;
+    height: 100%;
 }
