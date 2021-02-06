@@ -1,19 +1,5 @@
 // Home page
 
-.jumbotron {
-    color: white;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    height: 400px;
-    margin-top: 6em;
-    margin-bottom: 3em;
-    @media all and (max-width: 991px){
-        margin-top: 4em!important;
-    }
-    @media all and (max-width: 577px){
-        margin-top: 5em!important;
-    }
-}
-
 .home__jumbotron {
     background: 
     linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2),rgba(139, 29, 40, 0.0)),
@@ -124,20 +110,6 @@
     background-position: 0% 30%;
     background-size: cover;
     color: white;
-    & .link--underline {
-        $contact__link-color:rgb(255, 255, 119) ;
-        color:$contact__link-color;
-        text-shadow: 2px 2px 2px black;
-        text-decoration: none;
-        background-size: 0% 2px;
-        background-position: left bottom;
-        background-image: linear-gradient(to right, $contact__link-color 0%, $contact__link-color 100%);
-        background-repeat: no-repeat;
-        transition: all 0.55s cubic-bezier(.2,.75,.5,1);
-        &:hover {            
-            background-size: 100% 2px;
-        }
-    }
 }
 
 .contact__logo-fcb {
@@ -150,4 +122,59 @@
 
 .contact__logo-phone {
     width: 1.5em;
+}
+
+.contact__contact-details__button {
+    font-size: 0.8em;
+    text-transform: none;
+    & a {
+        text-decoration: none;
+    }
+    &::after {
+        background-color:rgba(255, 255, 0, 0.5);
+    }
+    &::before {
+        left:0;
+        background-color: darken(rgba(255, 255, 0, 0.5),5%);
+    }
+    &:hover { 
+        .link--underline {           
+            background-size: 100% 2px;
+        }
+    }
+    & .link--underline {
+        $contact__link-color:black ;
+        color:$contact__link-color;
+        text-decoration: none;
+        background-size: 0% 2px;
+        background-position: left bottom;
+        background-image: linear-gradient(to right, $contact__link-color 0%, $contact__link-color 100%);
+        background-repeat: no-repeat;
+        transition: all 0.55s cubic-bezier(.2,.75,.5,1);
+    }
+}
+
+// Reglement page
+
+.reglement__title-logo {
+    width: 2.5em;
+}
+
+.reglement__jumbotron-1 {
+    background: 
+    // linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
+    url(../images/ranch.jpg), no-repeat;
+    background-position: 50% 0%;
+    background-size: cover;
+    color: white;
+    height: 100%;
+}
+
+.reglement__download-button {
+    &::after {
+        background-color:rgba(255, 255, 0, 0.8);
+    }
+    &::before {
+        background-color: darken(rgba(255, 255, 0, 0.8),5%);
+    }
 }
