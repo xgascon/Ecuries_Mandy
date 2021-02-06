@@ -526,7 +526,7 @@ h1 {
   background-color: rgba(255, 255, 0, 0.8);
 }
 .reglement__download-button::before {
-  background-color: rgba(230, 230, 0, 0.8);
+  background-color: #e6e600;
 }
 
 /*# sourceMappingURL=style.css.map */
