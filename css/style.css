@@ -188,6 +188,13 @@ body {
   color: rgba(0, 0, 0, 0.8) !important;
 }
 
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar-brand {
   margin-right: 0em;
   text-align: center;
