@@ -4,9 +4,12 @@
     background: 
     linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2),rgba(139, 29, 40, 0.0)),
     url(../images/horse.jpg), no-repeat;
-    background-position: 50% 0%;
+    // background-position: 50% 0%;
+    background-position: 0% 55%;
     background-size: cover;
+    // height: 25em;
     @media all and (min-width: 992px){
+        // background-position: 0% 40%;
         background-position: 0% 40%;
     }  
 }
@@ -14,78 +17,124 @@
 .home__tile--display {
     display: flex;
     justify-content: center;
+    & a {
+        color: white;
+        text-shadow: 1px 1px 1px black;
+    }
 }
   
 .home__tile {
     overflow: hidden;
     // text-shadow: black 0.1em 0.1em 0.2em;
     transform: scale(1);
-    transition: all 500ms ease-in-out;  
+    transition: all 150ms ease-in-out;  
     &:hover {
         transform: scale(1.1);
         .card-title {            
-            transform : scale(1.5);
-            opacity: 0.4;
+            // transform : scale(1.5);
+            // transform: translateY(-30%);
+            // opacity: 0.7;
+            &-translate {
+                transform: translateY(-1em);
+            }       
+            &-scale {
+                transform: scale(1.2);
+            }    
         }
     }
     & .card-title {
         flex-wrap: wrap;
-        transform : scale(1);
+        // transform : translateY(0%);
         opacity: 1;
-        transition: all 300ms ease-in-out; 
+        transition: transform 300ms ease-in-out; 
         @media all and (min-width:992px) and (max-width:1160px){
             font-size: 1.1em!important;
         };
+        &-translate {
+            transform : translateY(0%); 
+            transition: transform 300ms ease-in-out;
+        }
+        &-scale {
+            transform : scale(1);
+            transition: transform 1s ease-in-out;
+        }
     }
     & a {
         color: white;               
         &:hover {
-            text-decoration: initial;            
+            text-decoration: initial;          
         }
-    }    
-}
+    }  
+    $home__tile--bg-image-color: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0));
+    $home__tile--bg-image-color--hover: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    display: flex;
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: '';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
 
-.home__tile-installations {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
-        url(../images/installations1.jpg);
-    background-position: 55% 80%;
-}
-
-.home__tile-reglement {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
+        background-image: 
+        $home__tile--bg-image-color--hover;
+    }
+    &:hover {
+        &::after {
+            height: 100%;
+            width: 100%;
+        }
+    } 
+    &-installations {
+        background-image: 
+        $home__tile--bg-image-color,
+        url(../images/audrey_cheval.jpg);
+        background-position: 30% 50%;
+        background-size: cover;        
+    }  
+    &-reglement {
+        background-image: 
+        $home__tile--bg-image-color,
         url(../images/logo_Mandy.jpg);
-    background-position: 15% 60%;
-    background-size: cover;
-    // background-size: 100%;
-    // @media all and (min-width:992px) and (max-width: 1450px){
-    //     background-size: 175%;
-    // }
-}
-
-.home__tile-stages {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
+        background-position: 15% 60%;
+        background-size: cover;
+        // background-size: 100%;
+        // @media all and (min-width:992px) and (max-width: 1450px){
+        //     background-size: 175%;
+        // // }
+    } 
+    &-stages {
+        background-image: 
+        // linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
+        $home__tile--bg-image-color,
         url(../images/enCours2.jpg);
-    background-position: 50% 0%;
-    // background-size: 150%;
-    background-size: cover;
-}
-
-.home__tile-tarifs {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
-        url(../images/Dj_Moon.jpg);
-    background-position: 90% 60%;
-}
-
-.home__tile-contact {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
+        background-position: 45% 0%;
+        // background-size: 150%;
+        background-size: cover;
+    }
+    &-tarifs {
+        background-image: 
+        // linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
+        $home__tile--bg-image-color,
+        url(../images/ranch.jpg);
+        background-position: 0% 50%;
+        background-size: cover;
+    }
+    &-contact {
+        background-image: 
+        // linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.0)),
+        $home__tile--bg-image-color,
         url(../images/contact.jpg);
-    background-position: 40% 20%;
-    background-size: cover;
+        background-position: 40% 20%;
+        background-size: cover;
+    }
 }
 
 .home__title {
@@ -127,26 +176,23 @@
 .contact__contact-details__button {
     font-size: 0.8em;
     text-transform: none;
-    & a {
-        text-decoration: none;
-    }
     &::after {
-        background-color:rgba(255, 255, 0, 0.5);
+        background-color:rgba(255, 255, 0, 0.7);
     }
     &::before {
         left:0;
-        background-color: darken(rgba(255, 255, 0, 0.5),5%);
+        background-color: darken(rgba(255, 255, 0, 1), 5%);
     }
     &:hover { 
         .link--underline {           
-            background-size: 100% 2px;
+            background-size: 100% 1px;
         }
     }
     & .link--underline {
         $contact__link-color:black ;
         color:$contact__link-color;
         text-decoration: none;
-        background-size: 0% 2px;
+        background-size: 0% 1px;
         background-position: left bottom;
         background-image: linear-gradient(to right, $contact__link-color 0%, $contact__link-color 100%);
         background-repeat: no-repeat;
@@ -162,9 +208,9 @@
 
 .reglement__jumbotron-1 {
     background: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
+    linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
     url(../images/ranch.jpg), no-repeat;
-    background-position: 50% 0%;
+    background-position: 30% 0%;
     background-size: cover;
     color: white;
     height: 100%;
@@ -179,14 +225,120 @@
     }
 }
 
+.reglement__img {
+    width: 100%;
+        &-download {
+        display: block;
+        position: relative;
+        z-index: 1;    
+        &::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            padding-left: 3em;
+            padding-right: 3em;
+            text-align: center;
+            color: yellow;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        &:hover {
+            &::after {
+                background-color: rgba(0, 0, 0, 0.6);
+                z-index: 2;
+            }
+        }
+        &--reglement {
+            &:hover {
+                &::after {
+                    content: 'Cliquez pour télécharger le règlement';
+                }
+            }
+        }
+        &--inscription {
+            &:hover {
+                &::after {
+                    content: "Cliquez pour télécharger la fiche d'inscription";
+                }
+            }
+        }
+    }
+}
+
 // Tarifs page
 
 .tarifs__jumbotron {
     background: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
-    url(../images/horse-funny.jpg), no-repeat;
+    linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../images/ranch.jpg), no-repeat;
     background-position: 0% 0%;
     background-size: cover;
     color: white;
     height: 100%;
+}
+
+// Stages page
+
+.stages__main {
+    background: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../images/ranch.jpg), no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__text {
+        font-size: 3em;
+    }
+}
+
+.stages__elements {
+    position: absolute;
+    left: -5%;
+    top: 10%;
+    margin: auto;
+    color: white;
+    @media all and (max-width: 575px){
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        right: initial;
+        top: initial;
+        box-sizing: border-box;
+        width: 90%;
+    }
+    &__ribbons-display {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: max-content;
+        @media all and (max-width: 575px){
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:flex-start;
+            width: inherit;
+        }
+    }
+    &__ribbon{     
+        &:hover {
+            letter-spacing: .30rem;  
+        }
+    }
 }

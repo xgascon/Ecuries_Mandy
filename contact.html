@@ -16,7 +16,11 @@
         
         <div class="row">                       
             <nav class="col navbar navbar-light navbar-expand-lg fixed-top">  
-                <div class="navbar-brand"><img class="navbar--logo-Mandy" src="images/logo_Mandy.jpg" alt="logo Ecuries de Mandy tête cheval"></div>
+                <div class="navbar-brand">
+                    <a class="link-no-decoration" href="index.html">
+                        <img class="navbar--logo-Mandy" src="images/logo_Mandy.jpg" alt="logo Ecuries de Mandy tête cheval">
+                    </a>
+                </div>
                 <button class="navbar-toggler my-1" type="button" data-toggle="collapse" data-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -50,7 +54,7 @@
         <div class="container my-0 my-lg-5 py-0 py-lg-5 px-0">
             <div class="row mb-3 mb-lg-5 pb-3 pb-lg-5 mx-0 mx-lg-4 flex-center">
                 <div class="col-12 col-lg-6 mx-auto my-auto pt-5 pt-lg-0 order-2 order-lg-1 flex-center">
-                    <iframe class="apparition-scale scroll-apparition mx-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.430398798047!2d-1.1647296843704475!3d47.578869979182855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4808af8b157aff9d%3A0xef29c0b7985bd499!2sLe%20Champ%20Breton%2C%2044540%20Le%20Pin!5e0!3m2!1sfr!2sfr!4v1612190475637!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                                                           
+                    <iframe class="apparition-scale scroll-apparition mx-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.430398798047!2d-1.1647296843704475!3d47.578869979182855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4808af8b157aff9d%3A0xef29c0b7985bd499!2sLe%20Champ%20Breton%2C%2044540%20Le%20Pin!5e0!3m2!1sfr!2sfr!4v1612190475637!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                                                           
                 </div>    
 
                 <div class="apparition-bright col-12 col-lg-6 mx-0 mx-lg-auto my-auto py-4 order-1 order-lg-2 contact__contact-details">
@@ -58,9 +62,9 @@
                         Audrey Gascon - Le Champ Breton 44540 Le Pin
                     </h1>       
                     <div class="card-text text-left mx-4 my-5 pt-4 flex-center flex-column">
-                        <button class="apparition-bottom-1 scroll-apparition flex-center mb-3 contact-button contact__contact-details__button btn" type="button"><a class="flex-items-center" href="tel:+0684446961"><img src="images/phone_logo6.png" class="contact__logo-phone" alt=""> &nbsp; <span class="link--underline">06 84 44 69 61</span></a></button>
-                        <button class="apparition-bottom-2 scroll-apparition flex-center mb-3 contact-button contact__contact-details__button btn" type="button"><a class="flex-items-center" href="mailto:gasconaudrey@gmail.com"><img src="images/email_logo.png" class="contact__logo-email" alt=""> &nbsp; <span class="link--underline">gasconaudrey@gmail.com</span></a></button>
-                        <button class="apparition-bottom-3 scroll-apparition flex-center mb-3 contact-button contact__contact-details__button btn" type="button"><a class="flex-items-center" href="https://www.facebook.com/LesEcuriesdeMandy"><img src="images/facebook_logo2.png" class="contact__logo-fcb" alt=""> <span class="link--underline">LesEcuriesdeMandy</span></a></button>
+                        <button onclick="window.location.href='tel:+0684446961'" class="apparition-bottom-1 scroll-apparition flex-items-center flex-center mb-3 contact-button contact__contact-details__button btn" type="button"><img src="images/phone_logo6.png" class="contact__logo-phone" alt=""> &nbsp; <span class="link--underline">06 84 44 69 61</span></button>
+                        <button onclick="window.location.href='mailto:gasconaudrey@gmail.com'" class="apparition-bottom-2 scroll-apparition flex-items-center flex-center mb-3 contact-button contact__contact-details__button btn" type="button"><img src="images/email_logo.png" class="contact__logo-email" alt=""> &nbsp; <span class="link--underline">gasconaudrey@gmail.com</span></button>
+                        <button onclick="window.location.href='https://www.facebook.com/LesEcuriesdeMandy'" class="apparition-bottom-3 scroll-apparition flex-items-center flex-center mb-3 contact-button contact__contact-details__button btn" type="button"><img src="images/facebook_logo2.png" class="contact__logo-fcb" alt=""> <span class="link--underline">LesEcuriesdeMandy</span></button>
                         <!-- <p class="apparition-bottom-2 scroll-apparition flex-items-center "> &nbsp; <img src="images/email_logo.png" class="contact__logo-email" alt=""> &nbsp; <a class="link--underline" href="mailto:gasconaudrey@gmail.com">gasconaudrey@gmail.com</a></p>
                         <p class="apparition-bottom-2 scroll-apparition flex-items-center "> <img src="images/facebook_logo2.png" class="contact__logo-fcb" alt=""> <a class="link--underline flex-items-center" href="https://www.facebook.com/LesEcuriesdeMandy">LesEcuriesdeMandy</a> </p>    -->
                     </div>                                                              
@@ -101,14 +105,19 @@
 
         <div class="page-footer pt-3">
             <footer class="container-fluid">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <p class="font-italic">Les Ecuries de Mandy - Siret : 78974714400010</p>
-                        <p><a href="tel:+0684446961">06 84 44 69 61</a></p>                         
-                        <p><a href="mailto:gasconaudrey@gmail.com">gasconaudrey@gmail.com</a></p>
-                        <p class="flex-center"> <span class="font-italic">Facebook</span> &nbsp; <img src="images/facebook_logo.png" class="page-footer__logo-fcb" alt=""> &nbsp; <a href="https://www.facebook.com/LesEcuriesdeMandy"> LesEcuriesdeMandy</a> </p>
-                        <p>Audrey Gascon - Le Champ Breton, 44540, Le Pin</p>                        
+                <div class="container row flex-center my-4">
+                    <div class="col-12 col-md-6 col-lg-4 text-center">
+                        <p class="font-italic">Les Écuries de Mandy </p>
+                        <p>Audrey Gascon</p>
+                        <p>Le Champ Breton, 44540, Le Pin</p>
+                        <p>Siret : 78974714400010</p>                        
                     </div>
+                    <div class="col-8 col-sm-6 col-md-6 col-lg-4 mt-3 mt-md-0">                        
+                        <p class="flex-items-center"><img src="images/phone_logo62.png" class="page-footer__logo-phone" alt=""> &nbsp; &nbsp; <a href="tel:+0684446961"> 06 84 44 69 61</a></p> 
+                        <p class="flex-items-center"><img src="images/facebook_logo.png" class="page-footer__logo-fcb" alt=""> &nbsp; &nbsp; <a href="https://www.facebook.com/LesEcuriesdeMandy"> LesEcuriesdeMandy</a></p>
+                        <p class="flex-items-center"><img src="images/email_logo2.png" class="page-footer__logo-email" alt=""> &nbsp; &nbsp; <a href="mailto:gasconaudrey@gmail.com"> gasconaudrey@gmail.com</a></p>     
+                        <p class="flex-items-center"><img src="images/info_logo.png" class="page-footer__logo-email" alt=""> &nbsp; &nbsp; <a href="MentionsLegales.html"> Mentions légales</a></p>   
+                    </div>               
                 </div>
             </footer>
         </div>
@@ -118,7 +127,7 @@
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 

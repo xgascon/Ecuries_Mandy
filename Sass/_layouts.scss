@@ -128,12 +128,24 @@ body, .card-text, .nav-link, option, .form-control {
     animation: apparition-bright 2s;
 }
 
+.apparition-left-1-animation {
+    animation: apparition-left 1.7s;
+}
+
+.apparition-left-2-animation {
+    animation: apparition-left 2s;
+}
+
 .apparition-right-1-animation {
     animation: apparition-right 1.7s;
 }
 
 .apparition-right-2-animation {
     animation: apparition-right 2s;
+}
+
+.apparition-right-3-animation {
+    animation: apparition-right 2.3s;
 }
 
 .apparition-bottom-animation {
@@ -183,22 +195,31 @@ body, .card-text, .nav-link, option, .form-control {
     color: white;
     background-color: black;
     a {
+        padding-bottom: 0.2em;
         color: white;
         text-decoration: none;
         // transition: background-size 0.55s cubic-bezier(.2,.75,.5,1), color 0.5s ease;
-        background-size: 0% 2px;
+        background-size: 0% 3px;
         background-position: left bottom;
         background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
         background-repeat: no-repeat;
         transition: all 0.55s cubic-bezier(.2,.75,.5,1);
         &:hover {            
-            background-size: 100% 2px;
+            background-size: 100% 3px;
         }
     }
 }
 
 .page-footer__logo-fcb {
-    width: 1.5em;
+    width: 1.35em;
+}
+
+.page-footer__logo-phone {
+    width: 1.3em;
+}
+
+.page-footer__logo-email {
+    width: 1.3em;
 }
 
 

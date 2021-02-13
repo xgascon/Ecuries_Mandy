@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Montserrat_bold";
   src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
@@ -51,10 +52,50 @@ body {
   flex-direction: column;
 }
 
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 @media all and (max-width: 577px) {
   .display-none-for-phone {
     display: none;
   }
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader__img {
+  background: url(../images/logo_Mandy.jpg), no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 10em;
+  height: 10em;
+}
+
+.link-no-decoration {
+  text-decoration: none;
+}
+.link-no-decoration::after {
+  display: none !important;
 }
 
 @keyframes wriggle {
@@ -77,6 +118,14 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes apparition-fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes apparition-bottom {
@@ -256,12 +305,24 @@ h1 {
   animation: apparition-bright 2s;
 }
 
+.apparition-left-1-animation {
+  animation: apparition-left 1.7s;
+}
+
+.apparition-left-2-animation {
+  animation: apparition-left 2s;
+}
+
 .apparition-right-1-animation {
   animation: apparition-right 1.7s;
 }
 
 .apparition-right-2-animation {
   animation: apparition-right 2s;
+}
+
+.apparition-right-3-animation {
+  animation: apparition-right 2.3s;
 }
 
 .apparition-bottom-animation {
@@ -314,20 +375,29 @@ h1 {
   }
 }
 .page-footer a {
+  padding-bottom: 0.2em;
   color: white;
   text-decoration: none;
-  background-size: 0% 2px;
+  background-size: 0% 3px;
   background-position: left bottom;
   background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
   background-repeat: no-repeat;
   transition: all 0.55s cubic-bezier(0.2, 0.75, 0.5, 1);
 }
 .page-footer a:hover {
-  background-size: 100% 2px;
+  background-size: 100% 3px;
 }
 
 .page-footer__logo-fcb {
-  width: 1.5em;
+  width: 1.35em;
+}
+
+.page-footer__logo-phone {
+  width: 1.3em;
+}
+
+.page-footer__logo-email {
+  width: 1.3em;
 }
 
 .jumbotron {
@@ -357,7 +427,7 @@ h1 {
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
   font-weight: bold;
-  color: #05026d;
+  color: black;
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.15rem;
@@ -389,7 +459,7 @@ h1 {
   right: 0;
   width: 0%;
   height: 100%;
-  background-color: #e6e600;
+  background-color: #dbdb00;
   transition: all 0.3s;
   border-radius: 10rem;
   z-index: -1;
@@ -402,21 +472,25 @@ h1 {
 }
 
 .yellow-underline {
+  padding-bottom: 0.2em;
   text-decoration: none;
-  background-size: 0% 2px;
+  background-size: 0% 3px;
   background-position: left bottom;
   background-image: linear-gradient(to right, yellow 0%, yellow 100%);
   background-repeat: no-repeat;
 }
-
-.bg-100 {
+.yellow-underline--bg-size {
   transition: background-size 1.3s ease-in-out;
-  background-size: 100% 2px;
+  background-size: 60% 3px;
+}
+
+.bg-center {
+  background-position: center bottom;
 }
 
 .home__jumbotron {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2), rgba(139, 29, 40, 0)), url(../images/horse.jpg), no-repeat;
-  background-position: 50% 0%;
+  background-position: 0% 55%;
   background-size: cover;
 }
 @media all and (min-width: 992px) {
@@ -429,29 +503,45 @@ h1 {
   display: flex;
   justify-content: center;
 }
+.home__tile--display a {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
 
 .home__tile {
   overflow: hidden;
   transform: scale(1);
-  transition: all 500ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  display: flex;
+  position: relative;
+  z-index: 1;
 }
 .home__tile:hover {
   transform: scale(1.1);
 }
-.home__tile:hover .card-title {
-  transform: scale(1.5);
-  opacity: 0.4;
+.home__tile:hover .card-title-translate {
+  transform: translateY(-1em);
+}
+.home__tile:hover .card-title-scale {
+  transform: scale(1.2);
 }
 .home__tile .card-title {
   flex-wrap: wrap;
-  transform: scale(1);
   opacity: 1;
-  transition: all 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
 }
 @media all and (min-width: 992px) and (max-width: 1160px) {
   .home__tile .card-title {
     font-size: 1.1em !important;
   }
+}
+.home__tile .card-title-translate {
+  transform: translateY(0%);
+  transition: transform 300ms ease-in-out;
+}
+.home__tile .card-title-scale {
+  transform: scale(1);
+  transition: transform 1s ease-in-out;
 }
 .home__tile a {
   color: white;
@@ -459,31 +549,46 @@ h1 {
 .home__tile a:hover {
   text-decoration: initial;
 }
-
-.home__tile-installations {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/installations1.jpg);
-  background-position: 55% 80%;
+.home__tile::after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
-
+.home__tile:hover::after {
+  height: 100%;
+  width: 100%;
+}
+.home__tile-installations {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/audrey_cheval.jpg);
+  background-position: 30% 50%;
+  background-size: cover;
+}
 .home__tile-reglement {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/logo_Mandy.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/logo_Mandy.jpg);
   background-position: 15% 60%;
   background-size: cover;
 }
-
 .home__tile-stages {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/enCours2.jpg);
-  background-position: 50% 0%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/enCours2.jpg);
+  background-position: 45% 0%;
   background-size: cover;
 }
-
 .home__tile-tarifs {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/Dj_Moon.jpg);
-  background-position: 90% 60%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/ranch.jpg);
+  background-position: 0% 50%;
+  background-size: cover;
 }
-
 .home__tile-contact {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/contact.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/contact.jpg);
   background-position: 40% 20%;
   background-size: cover;
 }
@@ -524,23 +629,20 @@ h1 {
   font-size: 0.8em;
   text-transform: none;
 }
-.contact__contact-details__button a {
-  text-decoration: none;
-}
 .contact__contact-details__button::after {
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: rgba(255, 255, 0, 0.7);
 }
 .contact__contact-details__button::before {
   left: 0;
-  background-color: rgba(230, 230, 0, 0.5);
+  background-color: #e6e600;
 }
 .contact__contact-details__button:hover .link--underline {
-  background-size: 100% 2px;
+  background-size: 100% 1px;
 }
 .contact__contact-details__button .link--underline {
   color: black;
   text-decoration: none;
-  background-size: 0% 2px;
+  background-size: 0% 1px;
   background-position: left bottom;
   background-image: linear-gradient(to right, black 0%, black 100%);
   background-repeat: no-repeat;
@@ -552,8 +654,8 @@ h1 {
 }
 
 .reglement__jumbotron-1 {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../images/ranch.jpg), no-repeat;
-  background-position: 50% 0%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../images/ranch.jpg), no-repeat;
+  background-position: 30% 0%;
   background-size: cover;
   color: white;
   height: 100%;
@@ -566,12 +668,106 @@ h1 {
   background-color: #e6e600;
 }
 
+.reglement__img {
+  width: 100%;
+}
+.reglement__img-download {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.reglement__img-download::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+  text-align: center;
+  color: yellow;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.reglement__img-download:hover::after {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.reglement__img-download--reglement:hover::after {
+  content: "Cliquez pour télécharger le règlement";
+}
+.reglement__img-download--inscription:hover::after {
+  content: "Cliquez pour télécharger la fiche d'inscription";
+}
+
 .tarifs__jumbotron {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url(../images/horse-funny.jpg), no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/ranch.jpg), no-repeat;
   background-position: 0% 0%;
   background-size: cover;
   color: white;
   height: 100%;
+}
+
+.stages__main {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(../images/ranch.jpg), no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  color: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stages__main__text {
+  font-size: 3em;
+}
+
+.stages__elements {
+  position: absolute;
+  left: -5%;
+  top: 10%;
+  margin: auto;
+  color: white;
+}
+@media all and (max-width: 575px) {
+  .stages__elements {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    right: initial;
+    top: initial;
+    box-sizing: border-box;
+    width: 90%;
+  }
+}
+.stages__elements__ribbons-display {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: max-content;
+}
+@media all and (max-width: 575px) {
+  .stages__elements__ribbons-display {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: inherit;
+  }
+}
+.stages__elements__ribbon:hover {
+  letter-spacing: 0.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

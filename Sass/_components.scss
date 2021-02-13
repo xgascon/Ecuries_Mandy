@@ -13,7 +13,6 @@
 }
 
 .separationBar {
-    // background-color: black;
     background-color: black;
     width: 75%;
 }
@@ -22,7 +21,7 @@
     padding: .75rem 1.25rem;
     border-radius: 10rem;
     font-weight: bold;
-    color: rgba(5, 2, 109, 1);
+    color: black;
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: .15rem;
@@ -51,7 +50,7 @@
         right: 0;
         width: 0%;
         height: 100%;
-        background-color: darken(yellow, 5%);
+        background-color: darken(yellow, 7%);
         transition: all .3s;
         border-radius: 10rem;
         z-index: -1;
@@ -59,21 +58,26 @@
     &:hover {
         letter-spacing: .30rem;      
         &::before {
-        width: 100%;        
+            width: 100%;        
         }
     }
 }
 
 .yellow-underline {
     $underline-color:yellow ;
+    padding-bottom: 0.2em;
     text-decoration: none;
-    background-size: 0% 2px;
+    background-size: 0% 3px;
     background-position: left bottom;
     background-image: linear-gradient(to right, $underline-color 0%, $underline-color 100%);
     background-repeat: no-repeat;
+    &--bg-size {
+        transition: background-size 1.3s ease-in-out;
+        background-size: 60% 3px;
+    }
 }
 
-.bg-100 {
-    transition: background-size 1.3s ease-in-out;
-    background-size: 100% 2px;
+.bg-center {
+    background-position: center bottom;
 }
+

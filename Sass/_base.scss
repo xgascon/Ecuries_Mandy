@@ -60,8 +60,49 @@ body {
     flex-direction: column;
 }
 
+.flex-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .display-none-for-phone {
     @media all and (max-width: 577px) {
         display: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader__img {
+    background: 
+    url(../images/logo_Mandy.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 10em;
+    height: 10em;
+}
+
+.link-no-decoration {
+    text-decoration: none;
+    &::after {
+        display: none!important;
     }
 }

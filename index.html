@@ -13,10 +13,17 @@
     </head>
         
     <body>
-        
+        <div class="preloader">
+            <div class="preloader__img">    
+            </div>
+        </div>
         <div class="row">                       
             <nav class="col navbar navbar-light navbar-expand-lg fixed-top">  
-                <div class="navbar-brand"><img class="navbar--logo-Mandy" src="images/logo_Mandy.jpg" alt="logo Ecuries de Mandy tête cheval"></div>
+                <div class="navbar-brand">
+                    <a class="link-no-decoration" href="index.html">
+                        <img class="navbar--logo-Mandy" src="images/logo_Mandy.jpg" alt="logo Ecuries de Mandy tête cheval">
+                    </a>
+                </div>
                 <button class="navbar-toggler my-1" type="button" data-toggle="collapse" data-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -59,7 +66,7 @@
                         <div>
                             <h2 class="apparition-bottom-1 scroll-apparition">Poney Club / Centre Équestre à Le Pin <span class="font-italic">(44540)</span></h2>
                             <p class="apparition-bottom-2 scroll-apparition">Cours d'équitation - <span class="font-italic">Audrey Gascon</span></p>
-                            <a href="contact.html"><button class="mb-3 contact-button btn apparition-bottom-3 scroll-apparition" type="button" >Nous Contacter</button></a>
+                            <button onclick="window.location.href = 'contact.html'" class="mb-3 contact-button btn apparition-bottom-3 scroll-apparition" type="button" >Nous Contacter</button>
                         </div>                        
                     </div>
                 </div>
@@ -91,51 +98,42 @@
 
             <!-- Below tiles for links to other pages of the website -->
             <div class="row home__tile--display mx-5 mt-5 py-5 text-center">
-                <div class="col-md-3 col-lg mx-4 my-2 px-5 home__tile home__tile-installations flex-center scroll-apparition apparition-scale-3">
-                    <a class="m-0 p-0" href="installations.html">
-                        <div class="my-4 py-4">
-                            <h2 class="card-title">
-                                Nos Installations 
-                            </h2>                                                    
+                <a class="flex-column-reverse flex-items-center col-md-3 col-lg mx-4 my-4 px-5 home__tile home__tile-installations home__tile-installations-hoverEffect scroll-apparition apparition-scale-3" href="installations.html">
+                    <!-- <div class="mt-5 pt-5"> -->
+                        <!-- <div class="mt-5 pt-5">frfzr</div> -->
+                        <div class="mt-5 pt-5 card-title card-title-scale">                            
+                           <h2 class="card-title-translate">Nos Installations</h2> 
+                        </div>                                                    
+                    <!-- </div> -->
+                </a> 
+                <a class="flex-column-reverse flex-items-center col-md-3 col-lg mx-4 my-4 px-5 home__tile home__tile-reglement flex-center scroll-apparition apparition-scale-1" href="reglement.html">                    
+                    
+                        <div class="mt-5 pt-5 card-title card-title-scale">
+                            <h2 class="card-title-translate">Règlement Intérieur & Inscription</h2>
                         </div>
-                    </a>
-                </div> 
-                <div class="col-md-3 col-lg mx-4 my-2 px-5 home__tile home__tile-reglement flex-center scroll-apparition apparition-scale-1">                    
-                    <a class="m-0 p-0" href="reglement.html">
-                        <div class="my-4 py-4">
-                            <h2 class="card-title">
-                                Règlement Intérieur & Inscription
-                            </h2>
-                        </div>
-                    </a> 
-                </div>  
-                <div class="col-md-3 col-lg mx-4 my-2 px-5 home__tile home__tile-stages flex-center scroll-apparition apparition-bottom-2">
-                    <a class="m-0 p-0" href="stages.html">
-                        <div class="my-4 py-4">
-                            <h2 class="card-title">
-                                Stages Vacances
-                            </h2>                                                    
-                        </div>
-                    </a>
-                </div>  
-                <div class="col-md-3 col-lg mx-4 my-2 px-5 home__tile home__tile-tarifs flex-center scroll-apparition apparition-scale-1">
-                    <a class="m-0 p-0" href="tarifs.html">
-                        <div class="my-4 py-4">
-                            <h2 class="card-title">
-                                Tarifs & Modalités de Paiement
-                            </h2>                                                    
-                        </div>
-                    </a>
-                </div>  
-                <div class="col-md-3 col-lg mx-4 my-2 px-5 home__tile home__tile-contact flex-center scroll-apparition apparition-right-2">
-                    <a class="m-0 p-0" href="contact.html">
-                        <div class="my-4 py-4">
-                            <h2 class="card-title">
-                                Contact
-                            </h2>                                                    
-                        </div>
-                    </a>
-                </div>              
+                
+                </a>  
+                <a class="flex-column-reverse flex-items-center col-md-3 col-lg mx-4 my-4 px-5 home__tile home__tile-stages flex-center scroll-apparition apparition-bottom-2" href="stages.html">
+                    
+                        <div class="mt-5 pt-5 card-title card-title-scale">
+                            <h2 class="card-title-translate">Stages Vacances</h2>
+                        </div>                                                    
+                    
+                </a>  
+                <a class="flex-column-reverse flex-items-center col-md-3 col-lg mx-4 my-4 px-5 home__tile home__tile-tarifs flex-center scroll-apparition apparition-scale-1" href="tarifs.html">
+                    
+                        <div class="mt-5 pt-5 card-title card-title-scale">
+                            <h2 class="card-title-translate">Tarifs & Modalités de Paiement</h2>
+                        </div>                                                    
+                    
+                </a> 
+                <a class="flex-column-reverse flex-items-center col-md-3 col-lg mx-4 my-4 px-5 home__tile home__tile-contact flex-center scroll-apparition apparition-right-2" href="contact.html">
+                    
+                        <div class="mt-5 pt-5 card-title card-title-scale">
+                            <h2 class="card-title-translate">Contact</h2>
+                        </div>                                                    
+                    
+                </a>              
             </div>
         </div>
 
@@ -170,14 +168,19 @@
 
         <div class="page-footer pt-3">
             <footer class="container-fluid">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <p class="font-italic">Les Ecuries de Mandy - Siret : 78974714400010</p>
-                        <p><a href="tel:+0684446961">06 84 44 69 61</a></p> 
-                        <p><a href="mailto:gasconaudrey@gmail.com">gasconaudrey@gmail.com</a></p>
-                        <p class="flex-center"> <span class="font-italic">Facebook</span> &nbsp; <img src="images/facebook_logo.png" class="page-footer__logo-fcb" alt=""> &nbsp; <a href="https://www.facebook.com/LesEcuriesdeMandy"> LesEcuriesdeMandy</a> </p>
-                        <p>Audrey Gascon - Le Champ Breton, 44540, Le Pin</p>
+                <div class="container row flex-center my-4">
+                    <div class="col-12 col-md-6 col-lg-4 text-center">
+                        <p class="font-italic">Les Écuries de Mandy </p>
+                        <p>Audrey Gascon</p>
+                        <p>Le Champ Breton, 44540, Le Pin</p>
+                        <p>Siret : 78974714400010</p>                        
                     </div>
+                    <div class="col-8 col-sm-6 col-md-6 col-lg-4 mt-3 mt-md-0">                        
+                        <p class="flex-items-center"><img src="images/phone_logo62.png" class="page-footer__logo-phone" alt=""> &nbsp; &nbsp; <a href="tel:+0684446961"> 06 84 44 69 61</a></p> 
+                        <p class="flex-items-center"><img src="images/facebook_logo.png" class="page-footer__logo-fcb" alt=""> &nbsp; &nbsp; <a href="https://www.facebook.com/LesEcuriesdeMandy"> LesEcuriesdeMandy</a></p>
+                        <p class="flex-items-center"><img src="images/email_logo2.png" class="page-footer__logo-email" alt=""> &nbsp; &nbsp; <a href="mailto:gasconaudrey@gmail.com"> gasconaudrey@gmail.com</a></p>     
+                        <p class="flex-items-center"><img src="images/info_logo.png" class="page-footer__logo-email" alt=""> &nbsp; &nbsp; <a href="MentionsLegales.html"> Mentions légales</a></p>   
+                    </div>                   
                 </div>
             </footer>
         </div>
@@ -187,7 +190,7 @@
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
