@@ -71,6 +71,12 @@ body {
     }
 }
 
+.display-none-for-largeScreens {
+    @media all and (min-width: 992px) {
+        display: none;
+    }
+}
+
 a {
     text-decoration: none;
     &:hover {

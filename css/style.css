@@ -63,6 +63,12 @@ body {
   }
 }
 
+@media all and (min-width: 992px) {
+  .display-none-for-largeScreens {
+    display: none;
+  }
+}
+
 a {
   text-decoration: none;
 }
