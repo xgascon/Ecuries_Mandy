@@ -336,9 +336,23 @@
             width: inherit;
         }
     }
-    &__ribbon{     
+    &__ribbon {     
         &:hover {
             letter-spacing: .30rem;  
+        }
+    }
+    &__ul {
+        font-size: 0.9em;
+    }
+}
+
+.actualites {
+    box-shadow: -10px 6px 20px 1px rgb(117, 117, 116);
+    & p {
+        font-size: 0.85em;
+        & i {
+            font-size: 0.8em;
+            color: darken(yellow, 10%);
         }
     }
 }

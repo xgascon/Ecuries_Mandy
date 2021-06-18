@@ -18,6 +18,7 @@
 body {
   font-family: "Sina";
   font-size: 1.5em;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -428,6 +429,9 @@ h1 {
   background-color: black;
   width: 75%;
 }
+.separationBar--actualites {
+  background-color: #f0f000;
+}
 
 .contact-button {
   padding: 0.75rem 1.25rem;
@@ -774,6 +778,20 @@ h1 {
 }
 .stages__elements__ribbon:hover {
   letter-spacing: 0.3rem;
+}
+.stages__elements__ul {
+  font-size: 0.9em;
+}
+
+.actualites {
+  box-shadow: -10px 6px 20px 1px #757574;
+}
+.actualites p {
+  font-size: 0.85em;
+}
+.actualites p i {
+  font-size: 0.8em;
+  color: #cccc00;
 }
 
 /*# sourceMappingURL=style.css.map */
