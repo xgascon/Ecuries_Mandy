@@ -37,6 +37,11 @@ body {
   align-items: center;
 }
 
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .flex-items-start {
   display: flex;
   justify-content: center;
@@ -616,6 +621,17 @@ h1 {
   justify-content: space-between;
 }
 
+.actualites {
+  box-shadow: -10px 6px 20px 1px #757574;
+}
+.actualites p {
+  font-size: 0.85em;
+}
+.actualites p i {
+  font-size: 0.8em;
+  color: #cccc00;
+}
+
 .contact__contact-details {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../images/contact.jpg), no-repeat;
   background-position: 0% 30%;
@@ -783,15 +799,28 @@ h1 {
   font-size: 0.9em;
 }
 
-.actualites {
-  box-shadow: -10px 6px 20px 1px #757574;
+.img-stages-1 {
+  background: url(../images/stages_ulk.jpg), no-repeat;
+  background-position: 40% 55%;
+  background-size: cover;
 }
-.actualites p {
-  font-size: 0.85em;
+
+.img-stages-2 {
+  background: url(../images/stages_poneyte.jpg), no-repeat;
+  background-position: 40% 55%;
+  background-size: cover;
 }
-.actualites p i {
-  font-size: 0.8em;
-  color: #cccc00;
+
+.img-stages-3 {
+  background: url(../images/stages_groupe.jpg), no-repeat;
+  background-position: 40% 85%;
+  background-size: cover;
+}
+
+.img-stages-4 {
+  background: url(../images/stages_ouistity.jpg), no-repeat;
+  background-position: 40% 35%;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

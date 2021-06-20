@@ -45,6 +45,11 @@ body {
     align-items: center;
 }
 
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .flex-items-start {
     display: flex;
     justify-content: center;

@@ -150,6 +150,17 @@
     justify-content: space-between;
 }
 
+.actualites {
+    box-shadow: -10px 6px 20px 1px rgb(117, 117, 116);
+    & p {
+        font-size: 0.85em;
+        & i {
+            font-size: 0.8em;
+            color: darken(yellow, 10%);
+        }
+    }
+}
+
 // Contact page
 
 .contact__contact-details {
@@ -346,13 +357,34 @@
     }
 }
 
-.actualites {
-    box-shadow: -10px 6px 20px 1px rgb(117, 117, 116);
-    & p {
-        font-size: 0.85em;
-        & i {
-            font-size: 0.8em;
-            color: darken(yellow, 10%);
-        }
-    }
+.img-stages-1 {
+    background: 
+    // linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2),rgba(139, 29, 40, 0.0)),
+    url(../images/stages_ulk.jpg), no-repeat;
+    background-position: 40% 55%;
+    background-size: cover;
+}
+
+.img-stages-2 {
+    background: 
+    // linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2),rgba(139, 29, 40, 0.0)),
+    url(../images/stages_poneyte.jpg), no-repeat;
+    background-position: 40% 55%;
+    background-size: cover;
+}
+
+.img-stages-3 {
+    background: 
+    // linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2),rgba(139, 29, 40, 0.0)),
+    url(../images/stages_groupe.jpg), no-repeat;
+    background-position: 40% 85%;
+    background-size: cover;
+}
+
+.img-stages-4 {
+    background: 
+    // linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2),rgba(139, 29, 40, 0.0)),
+    url(../images/stages_ouistity.jpg), no-repeat;
+    background-position: 40% 35%;
+    background-size: cover;
 }
