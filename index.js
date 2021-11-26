@@ -72,3 +72,20 @@ animateStagesButtonsDescription('.stages__elements__ribbon');
 $(function () {
     jQuery('.preloader').fadeOut(1000)
 })
+
+// Période scolaire avec date réactive pour la page Stages
+let date = new Date();
+let annee = date.getFullYear();
+let mois = date.getMonth();
+let periode = '';
+
+function periodeStage() {
+    if(mois >= 9){
+        periode = `${annee} - ${annee+1}`
+    } else {
+        periode = `${annee-1} - ${annee}`;
+    }
+    document.getElementById('periodeStage').innerHTML = periode;
+}
+
+periodeStage();
