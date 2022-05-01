@@ -57,6 +57,7 @@ function stages__description__buttons (buttonToClick, content) {
         stages__description__div.appendChild(newDescription__text);
     
         apparitionWhenVisibleAllAnimations ();
+        insertion_tarifs(tarifArray);
     });
 }
 
@@ -88,4 +89,29 @@ function periodeStage() {
     document.getElementById('periodeStage').innerHTML = periode;
 }
 
-periodeStage();
+if (document.getElementById('periodeStage')) {
+    periodeStage();
+}
+
+// Automatisation et référencement des tarifs
+const tarifArray = [
+    {tarifStage: '30€'}, 
+    {tarifDecouvertePoney: '15€'},
+    {tarifGalop: '35€'},
+    {tarifCoursPassager: '18€'},
+    {tarifCoursParticulier: '25€'},
+    {tarifCoursForfAnnuel: '14€'},
+    {tarifCoursForfAnnuelTotal: '504€'}
+];
+
+function insertion_tarifs (tarifs) {
+    tarifs.forEach(tarif => {
+        if (document.getElementsByClassName(Object.keys(tarif)).length !== 0) {
+            for (i = 0; i < document.getElementsByClassName(Object.keys(tarif)).length; i++) {
+                document.getElementsByClassName(Object.keys(tarif))[i].innerText = Object.values(tarif);
+            }
+        }
+    });
+};
+
+insertion_tarifs(tarifArray);
