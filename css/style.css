@@ -110,6 +110,10 @@ a:hover {
   display: none !important;
 }
 
+.width-inherit {
+  width: inherit;
+}
+
 @keyframes wriggle {
   0% {
     transform: translateX(1%) translateY(-2%) rotate(2deg);
