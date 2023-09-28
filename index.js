@@ -98,7 +98,7 @@ const tarifArray = [
     {tarifStage: '30€'}, 
     {tarifDecouvertePoney: '15€'},
     {tarifGalop: '35€'},
-    {tarifCoursPassager: '18€'},
+    {tarifCoursPassager: '20€'},
     {tarifCoursParticulier: '25€'},
     {tarifCoursForfAnnuel: '15,20€'},
     {tarifCoursForfAnnuelTotal: '547,20€'}
