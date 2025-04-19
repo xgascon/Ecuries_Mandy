@@ -100,8 +100,8 @@ const tarifArray = [
     {tarifGalop: '35€'},
     {tarifCoursPassager: '20€'},
     {tarifCoursSemiParticulier: '30€'},
-    {tarifCoursForfAnnuel: '15,20€'},
-    {tarifCoursForfAnnuelTotal: '547,20€'}
+    {tarifCoursForfAnnuel: '16€'},
+    {tarifCoursForfAnnuelTotal: '576€'}
 ];
 
 function insertion_tarifs (tarifs) {
