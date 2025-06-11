@@ -93,10 +93,39 @@ if (document.getElementById('periodeStage')) {
     periodeStage();
 }
 
+// Nom des vacances pour les actualités de la page Index
+let nomVacances = '';
+
+const nomVacancesObjet = { 
+    hiver : 'd\'Hiver', 
+    paques : 'de Pâques', 
+    ete : 'd\'Été',
+    toussaint : 'de la Toussaint',
+    noel : 'de Noël'
+};
+
+function nomVacancesFunction() {
+    if(mois <= 3){
+        nomVacances = nomVacancesObjet.hiver;
+    } else if(mois <= 4) {
+        nomVacances = nomVacancesObjet.paques;
+    } else if(mois <= 8) {
+        nomVacances = nomVacancesObjet.ete;
+    } else if(mois <= 10) {
+        nomVacances = nomVacancesObjet.toussaint;
+    } else if(mois <= 12) {
+        nomVacances = nomVacancesObjet.noel;
+    }
+    document.getElementById('nomVacances').innerHTML = nomVacances;
+}
+
+if (document.getElementById('nomVacances')) {
+    nomVacancesFunction();
+}
+
 // Automatisation et référencement des tarifs
 const tarifArray = [
     {tarifStage: '30€'}, 
-    {tarifDecouvertePoney: '15€'},
     {tarifGalop: '35€'},
     {tarifCoursPassager: '20€'},
     {tarifCoursSemiParticulier: '30€'},
